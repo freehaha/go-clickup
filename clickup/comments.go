@@ -8,9 +8,10 @@ import (
 type CommentsService service
 
 type CommentRequest struct {
-	CommentText string `json:"comment_text,omitempty"`
-	Assignee    int    `json:"assignee,omitempty"`
-	NotifyAll   bool   `json:"notify_all,omitempty"`
+	CommentText string             `json:"comment_text,omitempty"`
+	Assignee    int                `json:"assignee,omitempty"`
+	NotifyAll   bool               `json:"notify_all,omitempty"`
+	Comment     []CommentInComment `json:"comment,omitempty"`
 }
 
 type UpdateCommentRequest struct {
@@ -46,8 +47,19 @@ type Comment struct {
 	Date        string             `json:"date"`
 }
 
+type CommentAttributes struct {
+	Link string `json:"link"`
+}
+
+type CommentEmoticon struct {
+	Code string `json:"code"`
+}
+
 type CommentInComment struct {
-	Text string `json:"text"`
+	Text       string            `json:"text"`
+	Type       string            `json:"type,omitempty"`
+	Attributes CommentAttributes `json:"attributes,omitempty"`
+	Emoticon   CommentEmoticon   `json:"emoticon,omitempty"`
 }
 
 type Reaction struct {

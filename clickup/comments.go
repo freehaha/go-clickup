@@ -47,8 +47,14 @@ type Comment struct {
 	Date        string             `json:"date"`
 }
 
+type CommentCodeBlock struct {
+	Language string `json:"code-block"`
+}
+
 type CommentAttributes struct {
-	Link string `json:"link"`
+	Link      string           `json:"link,omitempty"`
+	Code      bool             `json:"code,omitempty"`
+	CodeBlock CommentCodeBlock `json:"code_block,omitempty"`
 }
 
 type CommentEmoticon struct {

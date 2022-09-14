@@ -165,6 +165,13 @@ type GetTasksOptions struct {
 	DateCreatedLt int64    `url:"date_created_lt,omitempty"`
 	DateUpdatedGt int64    `url:"date_updated_gt,omitempty"`
 	DateUpdatedLt int64    `url:"date_updated_lt,omitempty"`
+	CustomField   string   `url:"custom_fields,omitempty"`
+}
+
+type CustomFieldInGetTasksOptions struct {
+	FieldID  string      `url:"field_id,omitempty"`
+	Operator string      `url:"operator,omitempty"`
+	Value    interface{} `url:"value,omitempty"`
 }
 
 type GetTaskOptions struct {

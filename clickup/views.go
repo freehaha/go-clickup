@@ -62,11 +62,11 @@ type View struct {
 		AutoWrap               bool `json:"auto_wrap"`
 		TimeInStatusView       int  `json:"time_in_status_view"`
 	} `json:"settings"`
-	DateCreated string `json:"date_created"`
-	Creator     int    `json:"creator"`
-	Visibility  string `json:"visibility"`
-	Protected   bool   `json:"protected"`
-	Orderindex  int    `json:"orderindex"`
+	DateCreated string  `json:"date_created"`
+	Creator     int     `json:"creator"`
+	Visibility  string  `json:"visibility"`
+	Protected   bool    `json:"protected"`
+	Orderindex  float64 `json:"orderindex"`
 }
 
 type ViewResponse struct {

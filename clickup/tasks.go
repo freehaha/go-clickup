@@ -95,10 +95,10 @@ type TasksInStatus struct {
 }
 
 type TaskStatus struct {
-	Status     string `json:"status"`
-	Color      string `json:"color"`
-	Type       string `json:"type"`
-	Orderindex int    `json:"orderindex"`
+	Status     string  `json:"status"`
+	Color      string  `json:"color"`
+	Type       string  `json:"type"`
+	Orderindex float64 `json:"orderindex"`
 }
 
 type TaskPriority struct {
@@ -146,7 +146,7 @@ type TaskStatusHistory struct {
 	Color      string                     `json:"color"`
 	Type       string                     `json:"type"`
 	TotalTime  CurrentTaskStatusTotalTime `json:"total_time"`
-	Orderindex int                        `json:"orderindex"`
+	Orderindex float64                    `json:"orderindex"`
 }
 
 // TODO: Implement custom field
